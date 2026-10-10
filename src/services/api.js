@@ -1,8 +1,13 @@
 import axios from 'axios';
 
-// Automatically uses environment variable when deployed on Vercel
-// Falls back to local Spring Boot backend (http://localhost:8081) during local dev
-const baseURL = (import.meta.env.VITE_API_URL || 'http://localhost:8081').replace(/\/+$/, '');
+// Automatically uses environment variable VITE_API_URL if configured.
+// In development, defaults to local backend (http://localhost:8081).
+// In production (e.g. Vercel), defaults to the live Render backend (https://food-backend-hix6.onrender.com).
+const defaultUrl = import.meta.env.DEV
+  ? 'http://localhost:8081'
+  : 'https://food-backend-hix6.onrender.com';
+
+const baseURL = (import.meta.env.VITE_API_URL || defaultUrl).replace(/\/+$/, '');
 
 const API = axios.create({
   baseURL,

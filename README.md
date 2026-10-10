@@ -19,9 +19,9 @@ Modern, responsive web application built with **React 19**, **Vite 6**, and **Lu
    - **Output Directory**: `dist`
 5. Under **Environment Variables**, add:
    - **Name**: `VITE_API_URL`
-   - **Value**: Your Render Backend URL (e.g., `https://food-waste-backend.onrender.com`)
+   - **Value**: `https://food-backend-hix6.onrender.com`
 6. Click **Deploy**.
-7. In ~30 seconds, your site will be live at `https://your-app.vercel.app`!
+7. In ~30 seconds, your site will be live at `https://food-frontend-delta-ten.vercel.app`!
 
 ---
 
